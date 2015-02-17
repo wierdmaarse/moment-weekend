@@ -1,0 +1,17 @@
+{
+  "name": "moment-weekend",
+  "version": "0.0.0",
+  "description": "A utility to work out the difference between two dates but ignoring weekends",
+  "main": "weekend.js",
+  "scripts": {
+    "test": "jasmine-node specs"
+  },
+  "author": "Jonathon Choo",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  },
+  "dependencies": {
+    "moment": "^2.9.0"
+  }
+}
