@@ -19,7 +19,7 @@ exports.diff = function(startDate, endDate) {
     if(dayOfWeek != "Sun" && dayOfWeek != "Sat"){
       index++;
     }
-    dateIterator.add('days', 1);
+    dateIterator.add(1, 'days');
   }
 
   return index;
