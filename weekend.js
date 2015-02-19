@@ -2,6 +2,12 @@ var moment = require('moment');
 
 exports.diff = function(startDate, endDate) { 
 
+  if(!moment.isMoment(startDate))
+    throw new Error('start date is not a moment');
+
+  if(!moment.isMoment(endDate))
+    throw new Error('end date is not a moment');
+
   if(startDate > endDate)
     throw new Error('start date cannot be greater than end date');
 
