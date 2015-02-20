@@ -10,14 +10,14 @@ describe("weekend", function(){
   }); 
 
   it("end date is not a moment should return error", function(){
-    var start = moment("2015-02-12");
+    var start = moment("2015-02-12", "YYYY-MM-DD")
     expect(function() { weekend.diff(start, null)})
       .toThrow(new Error("end date is not a moment"));
   });
 
   it("test", function(){
-    var start = moment("2015-02-12");
-    var end = moment("2015-02-17");
+    var start = moment("2015-02-12", "YYYY-MM-DD")
+    var end = moment("2015-02-17", "YYYY-MM-DD")
     var result = weekend.diff(start, end);
 
     expect(result).toBe(3);
