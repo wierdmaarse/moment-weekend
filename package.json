@@ -6,6 +6,18 @@
   "scripts": {
     "test": "jasmine-node specs"
   },
+  "keywords": [
+    "momentjs",
+    "dates"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonnochoo/moment-weekend"
+  },
+  "bugs": {
+    "url": "https://github.com/jonnochoo/moment-weekend/issues"
+  },
+  "homepage": "https://github.com/jonnochoo/moment-weekend",
   "author": "Jonathon Choo",
   "license": "MIT",
   "devDependencies": {
