@@ -1,6 +1,6 @@
 {
   "name": "moment-weekend",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A utility to work out the difference between two dates but ignoring weekends",
   "main": "weekend.js",
   "scripts": {
