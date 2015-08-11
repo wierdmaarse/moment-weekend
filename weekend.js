@@ -1,11 +1,6 @@
 var moment = require('moment');
 
-var isWeekend = function (date){
-  return date.isoWeekday() >= 6;
-}
-
-module.exports = {
-  diff: function(startDate, endDate) {
+var diff = function(startDate, endDate) {
     if(!moment.isMoment(startDate))
       throw new Error('start date is not a moment');
 
@@ -27,7 +22,13 @@ module.exports = {
       dateIterator.add(1, 'days');
     }
     return index;
-  },
+  };
 
+var isWeekend = function (date){
+  return date.isoWeekday() >= 6;
+}
+
+module.exports = {
+  diff: diff,
   isWeekend: isWeekend
 };
