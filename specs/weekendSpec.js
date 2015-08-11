@@ -1,7 +1,7 @@
 var weekend = require('../weekend');
 var moment = require('moment');
 
-describe('weekend', function(){
+describe('diff', function() {
 
   it('start date is not a moment should return error', function(){
     var start = '2015-02-12';
@@ -22,6 +22,9 @@ describe('weekend', function(){
 
     expect(result).toBe(3);
   });
+});
+
+describe('isWeekend', function() {
 
   it('should say its weekend for a saturday', function(){
     var date = moment('2015-07-04', 'YYYY-MM-DD')
@@ -40,4 +43,33 @@ describe('weekend', function(){
     var result = weekend.isWeekend(date);
     expect(result).toBe(false);
   });
+
+});
+
+describe('isWeekday', function() {
+
+  it('should say it is weekday for a monday', function(){
+    var date = moment('2015-08-12', 'YYYY-MM-DD')
+    var result = weekend.isWeekday(date);
+    expect(result).toBe(true);
+  });
+
+  it('should say it is weekday for a Tuesday', function(){
+    var date = moment('2015-08-13', 'YYYY-MM-DD')
+    var result = weekend.isWeekday(date);
+    expect(result).toBe(true);
+  });  
+
+  it('should say it isnt weekday for a Saturday', function(){
+    var date = moment('2015-08-08', 'YYYY-MM-DD')
+    var result = weekend.isWeekday(date);
+    expect(result).toBe(false);
+  });
+
+  it('should say it isnt weekday for a Sunday', function(){
+    var date = moment('2015-08-09', 'YYYY-MM-DD')
+    var result = weekend.isWeekday(date);
+    expect(result).toBe(false);
+  });
+
 });

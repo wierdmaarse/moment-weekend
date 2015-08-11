@@ -2,7 +2,8 @@ var moment = require('moment');
 
 module.exports = {
   diff: diff,
-  isWeekend: isWeekend
+  isWeekend: isWeekend,
+  isWeekday: isWeekday
 };
 
 function diff(startDate, endDate) {
@@ -36,3 +37,6 @@ function isWeekend(date){
   return date.isoWeekday() >= 6;
 }
 
+function isWeekday(date){
+  return date.isoWeekday() < 6;
+}
