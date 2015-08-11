@@ -1,8 +1,7 @@
 var moment = require('moment');
 
 var isWeekend = function (date){
-    var dayOfWeek = date.format('ddd');
-    return dayOfWeek == "Sun" || dayOfWeek == "Sat";
+  return date.isoWeekday() >= 6;
 }
 
 module.exports = {
