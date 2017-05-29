@@ -22,7 +22,7 @@ function diff(startDate, endDate) {
   var pattern = 'DD-MM-YYYY';
   var dateIterator = moment(startDate);
   var index = 0;
-  while(dateIterator.format(pattern) != endDate.format(pattern)){
+  while(dateIterator.format(pattern) < endDate.format(pattern)){
 
     if(!isWeekend(dateIterator)){
       index++;
